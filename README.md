@@ -2,6 +2,8 @@
 
 ![Design preview for the Interactive rating component coding challenge](./design/desktop-preview.jpg)
 
+# [Live demo](https://peaceful-liger-fe2823.netlify.app/)
+
 ## Overview
 This is an Interactive Rating Component built as part of a Frontend Mentor challenge. The component allows users to select a rating from 1 to 5 and submit their choice. After submission, a confirmation screen displays the selected rating. The project is designed to be responsive and accessible.
 
