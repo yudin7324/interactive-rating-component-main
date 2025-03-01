@@ -12,29 +12,56 @@
   <script src="./assets/main.js" defer></script>
 </head>
 <body>
-
   <main class="main">
-  
-
     <div class="card">
-      <div class="card__icon">
-        <img src="./assets/images/icon-star.svg" alt="">
+      <div id="intro" class="card__intro active">
+        <div class="card__icon">
+          <img src="./assets/images/icon-star.svg" alt="star">
+        </div>
+        <h1 class="card__title">How did we do?</h1>
+        <p class="card__text">
+          Please let us know how we did with your support request. All feedback is appreciated 
+          to help us improve our offering!
+        </p>
+        <div class="card__raiting">
+          <label class="card__raiting-item" for="1">
+            <input id="1" type="radio" name="rating" value="1">
+            1
+          </label>
+          <label class="card__raiting-item" for="2">
+            <input id="2" type="radio" name="rating" value="2">
+            2
+          </label>
+          <label class="card__raiting-item" for="3">
+            <input id="3" type="radio" name="rating" value="3">
+            3
+          </label>
+          <label class="card__raiting-item" for="4">
+            <input id="4" type="radio" name="rating" value="4">
+            4
+          </label>
+          <label class="card__raiting-item" for="5">
+            <input id="5" type="radio" name="rating" value="5">
+            5
+          </label>
+        </div>
+        <button 
+          id="card-btn"
+          class="card__button" 
+          type="button" 
+          aria-label="submit btn"
+        >
+          Submit
+        </button>  
       </div>
-      <h1 class="card__title">How did we do?</h1>
-      <p class="card__text">
-        Please let us know how we did with your support request. All feedback is appreciated 
-        to help us improve our offering!
-      </p>
-
-      <ul class="card__raiting">
-        <li class="card__raiting-item">1</li>
-        <li class="card__raiting-item">2</li>
-        <li class="card__raiting-item">3</li>
-        <li class="card__raiting-item">4</li>
-        <li class="card__raiting-item">5</li>
-      </ul>
-
-      <button class="card__button" type="button" aria-label="submit btn">Submit</button>  
+      <div id="response" class="card__response">
+        <div class="card__response-img">
+          <img src="./assets/images/illustration-thank-you.svg" alt="thank you">
+        </div>
+        <div id="score" class="card__response-score"></div>
+        <div class="card__response-title">Thank you!</div>
+        <p class="card__response-text">We appreciate you taking the time to give a rating. If you ever need more support, don’t hesitate to get in touch!</p>
+      </div>
     </div>
   </main> 
 </body>

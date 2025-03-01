@@ -28,52 +28,93 @@ body {
   height: 100%;
 }
 
-/* - Mobile: 375px */
-/* - Desktop: 1440px */
-
 .main {
   height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 24px;
 }
 
 .card {
-  max-width: 412px;
-  padding: 32px;
+  max-width: 327px;
   border-radius: 30px;
   background: radial-gradient(98.96% 98.96% at 50% 0%, #232a34 0%, #181e27 100%);
+}
+
+@media (min-width: 600px) {
+  .card {
+    max-width: 412px;
+  }
+}
+
+.card__intro {
+  display: none;
+  padding: 24px;
+}
+
+.card__intro.active {
+  display: block;
+}
+
+@media (min-width: 600px) {
+  .card__intro {
+    padding: 32px;
+  }
 }
 
 .card__icon {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 48px;
-  height: 48px;
-  padding: 16px;
+  width: 40px;
+  height: 40px;
+  padding: 13px;
   border-radius: 50%;
   background-color: var(--color-dark-blue);
-  margin-bottom: 30px;
+  margin-bottom: 16px;
 
   img {
     object-fit: contain;
     width: 100%;
     height: 100%;
+    
+  }
+}
+
+@media (min-width: 600px) {
+  .card__icon {
+    width: 48px;
+    height: 48px;
+    padding: 16px;
+    margin-bottom: 30px;
   }
 }
 
 .card__title {
   font-weight: 700;
-  font-size: 28px;
-  margin-bottom: 15px;
+  font-size: 24px;
+  margin-bottom: 17px;
+}
+
+@media (min-width: 600px) {
+  .card__title {
+    font-size: 28px;
+    margin-bottom: 15px;
+  }
 }
 
 .card__text {
-  font-size: 15px;
+  font-size: 14px;
   line-height: 1.6;
   color: var(--color-light-grey);
   margin-bottom: 24px;
+}
+
+@media (min-width: 600px) {
+  .card__text {
+    font-size: 15px;
+  }
 }
 
 .card__raiting {
@@ -81,23 +122,57 @@ body {
   display: flex;
   align-items: center;
   gap: 22px;
-  margin-bottom: 32px;
+  margin-bottom: 24px;
+}
+
+@media (min-width: 600px) {
+  .card__raiting {
+    margin-bottom: 32px;
+  }
 }
 
 .card__raiting-item {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 51px;
-  width: 51px;
+  height: 42px;
+  width: 42px;
   font-weight: 700;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 1.5;
   letter-spacing: 0.01em;
   color: var(--color-light-grey);
   border-radius: 50%;
   background-color: var(--color-dark-blue);
   cursor: pointer;
+}
+
+@media (min-width: 600px) {
+  .card__raiting-item {
+    height: 51px;
+    width: 51px;
+    font-size: 16px;
+  }
+}
+
+.card__raiting-item:hover {
+  background-color: var(--color-orange);
+  color: var(--color-dark-blue);
+}
+
+.card__raiting-item input {
+  height: 0;
+  width: 0;
+  visibility: hidden;
+}
+
+.card__raiting-item input:checked {
+  appearance: none;
+}
+
+.card__raiting-item:has(input:checked) {
+  background-color: var(--color-white);
+  color: var(--color-dark-blue);
 }
 
 .card__button {
@@ -108,11 +183,106 @@ body {
   width: 100%;
   height: 45px;
   font-weight: 700;
-  font-size: 15px;
+  font-size: 14px;
   letter-spacing: 0.13em;
   text-transform: uppercase;
   color: var(--color-very-dark-blue);
   background-color: var(--color-orange);
   border: none;
   cursor: pointer;
+}
+
+@media (min-width: 600px) {
+  .card__button {
+    font-size: 15px;
+  }
+}
+
+.card__button:hover, 
+.card__button:active {
+  background-color: var(--color-white);
+}
+
+.card__response {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 34px 24px 37px 24px;
+}
+
+.card__response.active {
+  display: flex;
+}
+
+@media (min-width: 600px) {
+  .card__response {
+    padding: 45px 32px;
+  }
+}
+
+.card__response-img {
+  width: 144px;
+  height: 98px;
+  margin-bottom: 24px;
+
+  img {
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@media (min-width: 600px) {
+  .card__response-img {
+    width: 162px;
+    height: 108px;
+    margin-bottom: 32px;
+  }
+}
+
+.card__response-score {
+  border-radius: 22px;
+  background-color: var(--color-dark-blue);
+  font-size: 14px;
+  line-height: 1.6;
+  text-align: center;
+  color: var(--color-orange);
+  padding: 5px 12px;
+  margin-bottom: 24px;
+}
+
+@media (min-width: 600px) {
+  .card__response-score {
+    font-size: 15px;
+    padding: 4px 20px;
+    margin-bottom: 32px;
+  }
+}
+
+.card__response-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--color-white);
+  margin-bottom: 17px;
+}
+
+@media (min-width: 600px) {
+  .card__response-title {
+    font-size: 28px;
+    margin-bottom: 15px;
+  }
+}
+
+.card__response-text {
+  font-size: 14px;
+  line-height: 1.6;
+  text-align: center;
+  color: var(--color-light-grey);
+}
+
+@media (min-width: 600px) {
+  .card__response-text {
+    font-size: 15px;
+  }
 }
